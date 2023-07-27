@@ -4,6 +4,7 @@ import NavBar from '@/app/components/navBar'
 import Skills from '@/app/components/skills'
 import { Suspense } from 'react'
 import Loading from '@/app/loading'
+import Contacts from '@/app/components/contacts'
 
 
 
@@ -15,6 +16,7 @@ export default function Landing() {
         <Home/>
         <About/>
         <Skills/>
+        <Contacts/>
     </div>
     </Suspense>
   )

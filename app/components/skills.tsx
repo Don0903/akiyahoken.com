@@ -1,9 +1,9 @@
 "use client";
-
-import React from "react";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
 
 export default function skills() {
+
+  
   const imges = [
     "/html.png",
     "/css.png",
@@ -45,7 +45,8 @@ export default function skills() {
          className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8"
           variants={container}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{once:true} }
         >
           {imges.map((img, index) => (
             <motion.li className="" key={index} variants={item}>
