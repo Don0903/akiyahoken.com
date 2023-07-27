@@ -25,7 +25,7 @@ export default function NavBar() {
       current: false,
     },
     {
-      name: "Skills",
+      name: "Projects",
       href: "#",
       current: false,
     },
