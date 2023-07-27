@@ -82,7 +82,7 @@ export default function Home() {
           }}
           className="text-3xl flex justify-center items-center flex-col text-center"
         >
-          Welcome to my portfolio.
+          Welcome to my portfolio.<br/> Currently in development! 
         </motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
