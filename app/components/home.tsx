@@ -68,7 +68,7 @@ export default function Home() {
           }}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
-          className="box md:text-6xl text-5xl font-bold flex hover:cursor-pointer select-none"
+          className="box md:text-6xl sm:text-5xl text-4xl font-bold flex hover:cursor-pointer select-none"
         >
           {composedWord}
         </motion.h1>
@@ -80,7 +80,7 @@ export default function Home() {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="text-4xl flex justify-center items-center flex-col text-center"
+          className="text-3xl flex justify-center items-center flex-col text-center"
         >
           Welcome to my portfolio.
         </motion.p>
