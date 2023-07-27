@@ -48,9 +48,9 @@ export default function skills() {
       >
         {imges.map((img, index) => (
           <React.Fragment key={index}>
-          <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-2">
+          <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-6">
             <motion.li className="" key={index} variants={item}>
-              <img className="w-20 mx-auto " src={img.url} alt={`Image ${index}`} />
+              <img className="w-8  sm:w-20 mx-auto " src={img.url} alt={`Image ${index}`} />
               <p className="my-4">{img.name}</p>
             </motion.li>
           </div>
