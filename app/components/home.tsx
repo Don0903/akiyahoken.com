@@ -80,7 +80,7 @@ export default function Home() {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="text-4xl flex justify-center items-center "
+          className="text-4xl flex justify-center items-center flex-col text-center"
         >
           Welcome to my portfolio.
         </motion.p>
