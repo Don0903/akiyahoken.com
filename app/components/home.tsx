@@ -7,17 +7,17 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   // State for the slider value
-  const [sliderValue, setSliderValue] = useState(50);
+  const [sliderValue, setSliderValue] = useState([50]);
   const [composedWord, setComposedWord] = useState("I'm Akiya");
 
   // Handle the slider value change
-  const handleSliderValueChange = (newValue) => {
+  const handleSliderValueChange = (newValue:number[]) => {
     setSliderValue(newValue);
-    getWordFromSliderValue(newValue);
+    getWordFromSliderValue(newValue[0]);
   };
 
   // Function to get the corresponding word from the array based on the slider value
-  const getWordFromSliderValue = (value) => {
+  const getWordFromSliderValue = (value:number) => {
     const index = Math.floor(value / 5);
     setComposedWord(`I'm Ak${akState[index]}`);
   };
@@ -98,7 +98,7 @@ export default function Home() {
           <Slider
             onValueChange={handleSliderValueChange}
             className="py-4"
-            defaultValue={[sliderValue]}
+            defaultValue={sliderValue}
             max={100}
             step={5}
           />
@@ -118,3 +118,5 @@ export default function Home() {
     </div>
   );
 }
+
+
