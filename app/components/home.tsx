@@ -1,8 +1,7 @@
 "use client";
 
-import React, { use } from "react";
 import { Slider } from "@/components/ui/slider";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -11,13 +10,13 @@ export default function Home() {
   const [composedWord, setComposedWord] = useState("I'm Akiya");
 
   // Handle the slider value change
-  const handleSliderValueChange = (newValue:number[]) => {
+  const handleSliderValueChange = (newValue: number[]) => {
     setSliderValue(newValue);
     getWordFromSliderValue(newValue[0]);
   };
 
   // Function to get the corresponding word from the array based on the slider value
-  const getWordFromSliderValue = (value:number) => {
+  const getWordFromSliderValue = (value: number) => {
     const index = Math.floor(value / 5);
     setComposedWord(`I'm Ak${akState[index]}`);
   };
@@ -118,5 +117,3 @@ export default function Home() {
     </div>
   );
 }
-
-
