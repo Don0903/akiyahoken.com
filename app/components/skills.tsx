@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import React from "react";
 
 export default function skills() {
   const imges = [
@@ -46,12 +47,14 @@ export default function skills() {
         viewport={{ once: true }}
       >
         {imges.map((img, index) => (
+          <React.Fragment key={index}>
           <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-2">
             <motion.li className="" key={index} variants={item}>
               <img className="w-20 mx-auto " src={img.url} alt={`Image ${index}`} />
               <p className="my-4">{img.name}</p>
             </motion.li>
           </div>
+          </React.Fragment>
         ))}
       </motion.ul>
     </div>
