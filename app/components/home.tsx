@@ -69,7 +69,6 @@ export default function Home() {
           }}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
           className="box md:text-6xl text-5xl font-bold flex hover:cursor-pointer select-none"
         >
           {composedWord}
