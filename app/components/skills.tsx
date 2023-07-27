@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+
 import React from "react";
 
 export default function skills() {
@@ -36,7 +37,7 @@ export default function skills() {
   return (
     <div className="snap-center w-full h-screen flex flex-col justify-center items-center ">
       <h1 className="text-4xl flex justify-center items-center text-center">
-        Skills 
+        Skills
       </h1>
 
       <motion.ul
@@ -44,16 +45,20 @@ export default function skills() {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
       >
         {imges.map((img, index) => (
           <React.Fragment key={index}>
-          <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-6">
-            <motion.li className="" key={index} variants={item}>
-              <img className="w-8  sm:w-20 mx-auto " src={img.url} alt={`Image ${index}`} />
-              <p className="my-4">{img.name}</p>
-            </motion.li>
-          </div>
+            <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-6">
+              <motion.li className="" key={index} variants={item}>
+                <img
+                  className="w-8  sm:w-20 mx-auto "
+                  src={img.url}
+                  alt={`Image ${index}`}
+                />
+                <p className="my-4">{img.name}</p>
+              </motion.li>
+            </div>
           </React.Fragment>
         ))}
       </motion.ul>
