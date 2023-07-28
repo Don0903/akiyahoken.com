@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 
-
 export default function About() {
   const text =
     "Web Developer with passion for creating user-friendly, responsive and immersive websites.";
@@ -43,9 +42,17 @@ export default function About() {
     <div className="snap-center w-full h-screen flex flex-col justify-center items-center snap-mandatory">
       <motion.h1
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className=" text-4xl text-center border-b-4"
+        whileInView={{ opacity: 1}}
+        whileHover={{ scale: 1.2 }}
+        transition={{
+          duration: 0.5,
+          type: "spring",
+          stiffness: 400,
+          damping: 17,
+        }}
+        animate={{ opacity: 1 }}
+        whileTap={{ scale: 0.9 }}
+        className="box text-4xl text-center border-b-4 cursor-pointer select-none"
       >
         About me
       </motion.h1>
@@ -69,7 +76,8 @@ export default function About() {
         </motion.div>
         <p className="font-bold items-center justify-center text-center">
           I am aware that this section is not working neither look nice. I am
-          working on it. I currently do not take critisisms about this section. Thank you very much. hihihihi
+          working on it. I currently do not take critisisms about this section.
+          Thank you very much. hihihihi
         </p>
       </div>
     </div>
