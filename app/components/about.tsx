@@ -49,9 +49,9 @@ export default function About() {
       >
         About me
       </motion.h1>
-      <div className="w-full grid sm:grid-cols-2 gap-8 px-4">
+      <div className="w-full grid sm:grid-cols-2 gap-8 px-4 text-center">
         <motion.div
-          className="sm:text-right text-2xl font-bold justify-center items-center grid grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-0"
+          className="sm:text-right text-2xl font-bold "
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -60,6 +60,7 @@ export default function About() {
             <motion.span
               variants={child}
               style={{ marginRight: "5px" }}
+              className="inline-block"
               key={index}
             >
               {word}
