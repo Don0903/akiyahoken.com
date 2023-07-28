@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import animatedText from "@/app/components/animatedText";
+
 
 export default function About() {
   const text =
