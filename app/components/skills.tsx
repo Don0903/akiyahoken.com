@@ -37,12 +37,17 @@ export default function skills() {
 
   return (
     <div className="snap-center w-full h-screen flex flex-col justify-center items-center ">
-      <h1 className="text-4xl flex justify-center items-center text-center">
+      <motion.h1
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className=" text-4xl flex justify-center items-center text-center border-b-4 my-8"
+      >
         Skills
-      </h1>
+      </motion.h1>
 
       <motion.ul
-        className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8"
+        className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center "
         variants={container}
         initial="hidden"
         whileInView="visible"

@@ -45,11 +45,11 @@ export default function About() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className=" text-4xl text-center"
+        className=" text-4xl text-center border-b-4"
       >
         About me
       </motion.h1>
-      <div className="w-full grid sm:grid-cols-2 gap-8 px-4 text-center">
+      <div className="w-full grid sm:grid-cols-2 gap-8 px-4 text-center my-8">
         <motion.div
           className="sm:text-right text-2xl font-bold "
           variants={container}
