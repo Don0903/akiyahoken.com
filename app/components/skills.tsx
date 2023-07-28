@@ -12,6 +12,7 @@ export default function skills() {
     { url: "/tailwind.png", name: "Tailwind CSS" },
     { url: "/github.png", name: "GitHub" },
     { url: "/framer.svg", name: "Framer" },
+    { url: "/Vuejs.png", name: "Vue.js" },
   ];
 
   const container = {
@@ -45,7 +46,7 @@ export default function skills() {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        // viewport={{ once: true }}
+        viewport={{ once: true }}
       >
         {imges.map((img, index) => (
           <React.Fragment key={index}>
