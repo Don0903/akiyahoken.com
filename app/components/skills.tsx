@@ -41,15 +41,16 @@ export default function skills() {
         <motion.h1
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          whileHover={{ scale: 1.2 }}
+          // whileHover={{ scale: 1.2 }}
           transition={{
             duration: 0.5,
+            delay:0.2,
             type: "spring",
             stiffness: 400,
             damping: 17,
           }}
-          animate={{ opacity: 1 }}
-          whileTap={{ scale: 0.9 }}
+          // animate={{ opacity: 1 }}
+          // whileTap={{ scale: 0.9 }}
           className="box text-4xl text-center border-b-4 cursor-pointer select-none"
         >
           Skills
