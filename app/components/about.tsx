@@ -75,7 +75,7 @@ export default function About() {
               </motion.span>
             ))}
           </motion.div>
-          <p className="font-bold items-center justify-center text-center">
+          <p className="font-bold sm:text-left">
             I am aware that this section is not working neither look nice. I am
             working on it. I currently do not take critisisms about this
             section. Thank you very much. hihihihi
