@@ -9,6 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Link from "next/link";
 
 export default function NavBar() {
   const [nav, setNav] = useState(false);
@@ -16,12 +17,12 @@ export default function NavBar() {
   const navigation = [
     {
       name: "Home",
-      href: "#",
+      href: "/",
       current: true,
     },
     {
       name: "About",
-      href: "#",
+      href: "/about",
       current: false,
     },
     {
@@ -36,7 +37,7 @@ export default function NavBar() {
     },
     {
       name: "Contact",
-      href: "#",
+      href: "/contact",
       current: false,
     },
   ];
@@ -48,7 +49,7 @@ export default function NavBar() {
       <ul className="justify-between items-center hidden md:flex">
         {navigation.map((item) => (
           <li key={item.name} className="mx-4">
-            {item.name}
+            <Link href={item.href}>{item.name}</Link>
           </li>
         ))}
       </ul>
@@ -70,7 +71,7 @@ export default function NavBar() {
           <ul className="flex flex-col justify-center items-center">
             {navigation.map((item) => (
               <li key={item.name} className="flex w-full m-4 hover:scale-105 duration-300">
-                {item.name}
+                <Link href={item.href}>{item.name}</Link>
               </li>
             ))}
           </ul>

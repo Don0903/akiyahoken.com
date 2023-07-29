@@ -55,7 +55,7 @@ export default function About() {
           whileTap={{ scale: 0.9 }}
           className="box text-4xl text-center border-b-4 cursor-pointer select-none"
         >
-          About me
+          Introduction
         </motion.h1>
         <div className="w-full grid sm:grid-cols-2 gap-8 px-4 text-center my-8">
           <motion.div
