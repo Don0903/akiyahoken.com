@@ -54,7 +54,7 @@ export default function Home() {
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          className="box rounded-full h-[250px] sm:h-[300px] aspect-auto mb-8 hover:cursor-pointer select-none"
+          className="box rounded-full h-[250px] sm:h-[300px] aspect-auto mb-8 hover:cursor-pointer select-none border-black border-4"
           src="/profile.jpg "
           alt="profile"
         />

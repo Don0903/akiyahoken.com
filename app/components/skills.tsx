@@ -59,7 +59,7 @@ export default function skills() {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
       >
         {imges.map((img, index) => (
           <React.Fragment key={index}>

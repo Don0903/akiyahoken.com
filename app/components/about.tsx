@@ -39,46 +39,48 @@ export default function About() {
   };
 
   return (
-    <div className="snap-center w-full h-screen flex flex-col justify-center items-center snap-mandatory">
-      <motion.h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1}}
-        whileHover={{ scale: 1.2 }}
-        transition={{
-          duration: 0.5,
-          type: "spring",
-          stiffness: 400,
-          damping: 17,
-        }}
-        animate={{ opacity: 1 }}
-        whileTap={{ scale: 0.9 }}
-        className="box text-4xl text-center border-b-4 cursor-pointer select-none"
-      >
-        About me
-      </motion.h1>
-      <div className="w-full grid sm:grid-cols-2 gap-8 px-4 text-center my-8">
-        <motion.div
-          className="sm:text-right text-2xl font-bold "
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
+    <div className="snap-center h-screen flex flex-col justify-center items-center snap-mandatory">
+      <div className="max-w-6xl flex-col flex items-center justify-center">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          whileHover={{ scale: 1.2 }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
+          animate={{ opacity: 1 }}
+          whileTap={{ scale: 0.9 }}
+          className="box text-4xl text-center border-b-4 cursor-pointer select-none"
         >
-          {words.map((word, index) => (
-            <motion.span
-              variants={child}
-              style={{ marginRight: "5px" }}
-              className="inline-block"
-              key={index}
-            >
-              {word}
-            </motion.span>
-          ))}
-        </motion.div>
-        <p className="font-bold items-center justify-center text-center">
-          I am aware that this section is not working neither look nice. I am
-          working on it. I currently do not take critisisms about this section.
-          Thank you very much. hihihihi
-        </p>
+          About me
+        </motion.h1>
+        <div className="w-full grid sm:grid-cols-2 gap-8 px-4 text-center my-8">
+          <motion.div
+            className="sm:text-right text-2xl font-bold "
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+          >
+            {words.map((word, index) => (
+              <motion.span
+                variants={child}
+                style={{ marginRight: "5px" }}
+                className="inline-block"
+                key={index}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </motion.div>
+          <p className="font-bold items-center justify-center text-center">
+            I am aware that this section is not working neither look nice. I am
+            working on it. I currently do not take critisisms about this
+            section. Thank you very much. hihihihi
+          </p>
+        </div>
       </div>
     </div>
   );
