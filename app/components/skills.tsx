@@ -36,46 +36,48 @@ export default function skills() {
   };
 
   return (
-    <div className="snap-center w-full h-screen flex flex-col justify-center items-center ">
-      <motion.h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        whileHover={{ scale: 1.2 }}
-        transition={{
-          duration: 0.5,
-          type: "spring",
-          stiffness: 400,
-          damping: 17,
-        }}
-        animate={{ opacity: 1 }}
-        whileTap={{ scale: 0.9 }}
-        className="box text-4xl flex justify-center items-center text-center border-b-4 my-8 cursor-pointer select-none"
-      >
-        Skills
-      </motion.h1>
+    <div className="snap-center w-full  h-screen flex flex-col justify-center items-center ">
+      <div className="max-w-[1000px] w-full flex-col flex items-center justify-center">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          whileHover={{ scale: 1.2 }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
+          animate={{ opacity: 1 }}
+          whileTap={{ scale: 0.9 }}
+          className="box text-4xl text-center border-b-4 cursor-pointer select-none"
+        >
+          Skills
+        </motion.h1>
 
-      <motion.ul
-        className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center "
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        // viewport={{ once: true }}
-      >
-        {imges.map((img, index) => (
-          <React.Fragment key={index}>
-            <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-6">
-              <motion.li className="" key={index} variants={item}>
-                <img
-                  className="w-8  sm:w-20 mx-auto "
-                  src={img.url}
-                  alt={`Image ${index}`}
-                />
-                <p className="my-4">{img.name}</p>
-              </motion.li>
-            </div>
-          </React.Fragment>
-        ))}
-      </motion.ul>
+        <motion.ul
+          className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center my-8"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          // viewport={{ once: true }}
+        >
+          {imges.map((img, index) => (
+            <React.Fragment key={index}>
+              <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-6">
+                <motion.li className="" key={index} variants={item}>
+                  <img
+                    className="w-8  sm:w-20 mx-auto "
+                    src={img.url}
+                    alt={`Image ${index}`}
+                  />
+                  <p className="my-4">{img.name}</p>
+                </motion.li>
+              </div>
+            </React.Fragment>
+          ))}
+        </motion.ul>
+      </div>
     </div>
   );
 }
