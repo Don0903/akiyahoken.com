@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function introduction() {
+export default function Introduction() {
   const text =
     "Web Developer with passion for creating user-friendly, responsive and immersive websites.";
   const words = text.split(" ");

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-export default function skill() {
+export default function Skill() {
   const imges = [
     { url: "/html.png", name: "HTML" },
     { url: "/css.png", name: "CSS" },

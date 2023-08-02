@@ -4,7 +4,7 @@ import { Slider } from "@/components/ui/slider";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function profile() {
+export default function Profile() {
   // State for the slider value
   const [sliderValue, setSliderValue] = useState([50]);
   const [composedWord, setComposedWord] = useState("I'm Akiya");
