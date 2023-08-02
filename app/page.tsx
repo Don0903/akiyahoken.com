@@ -16,7 +16,6 @@ export default function Landing() {
         <Home/>
         <About/>
         <Skills/>
-
     </div>
     </Suspense>
   )
