@@ -55,7 +55,7 @@ export default function Skill() {
       </motion.h1>
 
       <motion.ul
-        className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center my-8"
+        className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center my-8 select-none"
         variants={container}
         initial="hidden"
         whileInView="visible"
@@ -63,14 +63,14 @@ export default function Skill() {
       >
         {imges.map((img, index) => (
           <React.Fragment key={index}>
-            <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-6">
+            <div className="rounded-full shadow-md shadow-gray hover:scale-110 duration-500 mx-6 select-none">
               <motion.li className="" key={index} variants={item}>
                 <img
-                  className="w-8  sm:w-20 mx-auto "
+                  className="w-8  sm:w-20 mx-auto select-none "
                   src={img.url}
                   alt={`Image ${index}`}
                 />
-                <p className="my-4">{img.name}</p>
+                <p className="my-4 ">{img.name}</p>
               </motion.li>
             </div>
           </React.Fragment>

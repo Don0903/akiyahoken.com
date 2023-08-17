@@ -26,17 +26,17 @@ export default function NavBar() {
     },
     {
       name: "Projects",
-      href: "#",
+      href: "/projects",
       current: false,
     },
     {
-      name: "Projects",
-      href: "#",
+      name: "Miscellaneous",
+      href: "/miscellaneous",
       current: false,
     },
     {
-      name: "Contact",
-      href: "/contact",
+      name: "Admins",
+      href: "/admins",
       current: false,
     },
   ];

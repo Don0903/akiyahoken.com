@@ -112,6 +112,7 @@ export default function Profile() {
       >
         Ak rating: {sliderValue}%
       </motion.p>
+
     </div>
   );
 }

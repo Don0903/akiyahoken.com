@@ -1,12 +1,12 @@
-import React from 'react'
-import NavBar from '../components/navBar'
+import React, { Suspense } from "react";
+import Loading from "../loading";
 
-const page = () => {
+export default function About() {
   return (
-    <div>
-        <NavBar/>
-    </div>
-  )
+    <Suspense fallback={<Loading />}>
+      <div className="w-full h-screen snap-center flex flex-col items-center justify-center">
+        About page in progress
+      </div>
+    </Suspense>
+  );
 }
-
-export default page
