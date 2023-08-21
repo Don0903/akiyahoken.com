@@ -1,45 +1,53 @@
 "use client";
-import { useState } from "react";
-import { FaBars} from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { FaBars } from "react-icons/fa";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-
 export default function NavBar() {
-  const [nav, setNav] = useState(false);
-  const handleClick = () => setNav(!nav);
   const navigation = [
     {
       name: "Home",
       href: "/",
-      current: true,
     },
     {
       name: "About",
       href: "/about",
-      current: false,
     },
     {
       name: "Projects",
       href: "/projects",
-      current: false,
     },
     {
       name: "Miscellaneous",
       href: "/miscellaneous",
-      current: false,
     },
     {
       name: "Admins",
       href: "/admins",
-      current: false,
     },
   ];
+
+
+  const [active, setActive] = useState(navigation[0].name);
+
+  useEffect(() => {
+    const storedActiveLink = localStorage.getItem("activeLink");
+    if (storedActiveLink) {
+      setActive(storedActiveLink);
+    }
+  }, []); // Run only once on component mount
+
+  useEffect(() => {
+    localStorage.setItem("activeLink", active);
+  }, [active]);
+
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 shadow bg-white z-10">
       {/* logo */}
@@ -47,9 +55,16 @@ export default function NavBar() {
       {/* nav */}
       <ul className="justify-between items-center hidden md:flex">
         {navigation.map((item) => (
-          <li key={item.name} className="mx-4">
-            <Link href={item.href}>{item.name}</Link>
-          </li>
+          <Link
+            href={item.href}
+            key={item.name}
+            className={`${
+              active === item.name ? "bg-black text-white" : "hover:opacity-50"
+            } rounded-full px-4 py-2`}
+            onClick={() => setActive(item.name)}
+          >
+            {item.name}
+          </Link>
         ))}
       </ul>
 
@@ -57,21 +72,31 @@ export default function NavBar() {
       <Sheet>
         <SheetTrigger className="md:hidden">
           {/* hanburger */}
-          <div onClick={handleClick} className="md:hidden z-10">
-              <FaBars className="text-3xl" />
+          <div className="md:hidden z-10">
+            <FaBars className="text-3xl" />
           </div>
         </SheetTrigger>
         <SheetContent className="w-[300px]">
           <SheetHeader>
             <SheetTitle className="mx-auto">Menu</SheetTitle>
             <hr />
-
           </SheetHeader>
           <ul className="flex flex-col justify-center items-center">
             {navigation.map((item) => (
-              <li key={item.name} className="flex w-full m-4 hover:scale-105 duration-300">
-                <Link href={item.href}>{item.name}</Link>
-              </li>
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`${
+                  active === item.name
+                    ? "bg-black text-white"
+                    : "hover:opacity-50"
+                } rounded-full px-4 py-4  flex w-full hover:scale-105 duration-300`}
+                onClick={() => {
+                  setActive(item.name);
+                }}
+              >
+                {item.name}
+              </Link>
             ))}
           </ul>
         </SheetContent>

@@ -19,10 +19,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/profile.jpg" sizes="any" />
       </head>
-        <body className={inter.className}>
+      <body className={inter.className}>
           <NavBar />
           {children}
-          </body>
+      </body>
     </html>
   );
 }

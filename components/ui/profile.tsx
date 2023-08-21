@@ -3,11 +3,13 @@
 import { Slider } from "@/components/ui/slider";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useSession } from "next-auth/react";
 
 export default function Profile() {
   // State for the slider value
   const [sliderValue, setSliderValue] = useState([50]);
   const [composedWord, setComposedWord] = useState("I'm Akiya");
+  const { data: session } = useSession(); // Use the useSession hook
 
   // Handle the slider value change
   const handleSliderValueChange = (newValue: number[]) => {
@@ -36,10 +38,10 @@ export default function Profile() {
     "rizzler",
     "wizard",
     "lord",
-    "Sir",
+    "prince",
     " the great",
     "phenomenal",
-    "prince",
+    "Sir",
     "master",
     "legend",
     "God",
@@ -61,7 +63,6 @@ export default function Profile() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{
           duration: 0.8,
-          delay: 0.3,
           ease: [0, 0.71, 0.2, 1.01],
         }}
         whileHover={{ scale: 1.2 }}
@@ -99,9 +100,12 @@ export default function Profile() {
           defaultValue={sliderValue}
           max={100}
           step={5}
+          disabled={!session}
+          style={{ opacity: session ? 1 : 0.5 }}
         />
       </motion.div>
       <motion.p
+        className="text-center"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -112,7 +116,20 @@ export default function Profile() {
       >
         Ak rating: {sliderValue}%
       </motion.p>
-
+      <motion.p
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="text-center text-xs
+      "
+      style={{color: session ? "white" : "black"}}
+      >
+        *only admins can change this
+      </motion.p>
     </div>
   );
 }
