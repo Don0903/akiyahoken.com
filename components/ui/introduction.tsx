@@ -77,8 +77,7 @@ export default function Introduction() {
         </motion.div>
         <p className="font-bold sm:text-left">
           I am aware that this section is not working neither look nice. I am
-          working on it. I currently do not take critisisms about this section.
-          Thank you very much. hihihihi
+          working on it, and testing things out!
         </p>
       </div>
     </div>
