@@ -30,8 +30,6 @@ interface ResearchDialogProps {
 export default function ResearchDialog({ trigger, title, image, content, technologies }: ResearchDialogProps) {
   const [open, setOpen] = useState(false)
 
-  const handleClose = () => setOpen(false)
-
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>{trigger}</AlertDialogTrigger>
@@ -41,7 +39,7 @@ export default function ResearchDialog({ trigger, title, image, content, technol
         <AlertDialogHeader className="space-y-4">
           <div className="flex justify-between items-start">
             <AlertDialogTitle className="text-2xl font-bold pr-8">{title}</AlertDialogTitle>
-            <Button variant="ghost" size="icon" onClick={handleClose} className="shrink-0">
+            <Button variant="ghost" size="icon" onClick={() => setOpen(false)} className="shrink-0">
               <X className="h-4 w-4" />
             </Button>
           </div>
