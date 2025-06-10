@@ -34,7 +34,7 @@ export default function ContactSection() {
               viewport={{ once: true }}
               className="text-lg text-muted-foreground max-w-2xl mx-auto"
             >
-              I'm always interested in new opportunities and exciting projects. Feel free to reach out!
+              I&apos;m always interested in new opportunities and exciting projects. Feel free to reach out!
             </motion.p>
 
             {/* Contact Details */}

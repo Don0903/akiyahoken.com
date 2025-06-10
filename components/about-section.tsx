@@ -2,6 +2,7 @@
 
 import AnimatedSection from "@/components/animated-section"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function AboutSection() {
   return (
@@ -24,8 +25,14 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="flex justify-center"
           >
-            <div className="w-64 h-64 md:w-86 md:h-86 bg-muted rounded-full flex items-center justify-center">
-              <img src="/akboi.jpeg" alt="Profile" className="w-full h-full object-cover rounded-full" />
+            <div className="w-64 h-64 md:w-86 md:h-86 bg-muted rounded-full flex items-center justify-center relative">
+              <Image 
+                src="/akboi.jpeg" 
+                alt="Profile" 
+                fill
+                className="object-cover rounded-full"
+                priority
+              />
             </div>
           </motion.div>
           <motion.div
@@ -35,12 +42,12 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <p className="text-lg text-muted-foreground mb-6">
-              I'm a passionate developer with over 5 years of experience creating digital solutions that make a
+              I&apos;m a passionate developer with over 5 years of experience creating digital solutions that make a
               difference. I specialize in modern web technologies and love turning complex problems into simple,
               beautiful designs.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or
+              When I&apos;m not coding, you can find me exploring new technologies, contributing to open source projects, or
               sharing knowledge with the developer community.
             </p>
             <div className="flex flex-wrap gap-4">

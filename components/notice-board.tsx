@@ -73,14 +73,14 @@ export default function NoticeBoard() {
                     placeholder text.
                   </p>
                   <p>
-                    I'm actively working on adding real project details, research findings, and polishing the overall
+                    I&apos;m actively working on adding real project details, research findings, and polishing the overall
                     experience. Thank you for your patience!
                   </p>
                 </div>
 
                 <div className="flex gap-2 pt-2">
                   <Button onClick={handleClose} className="flex-1 text-sm">
-                    Got it, don't show again
+                    Got it, don&apos;t show again
                   </Button>
                   <Button variant="outline" onClick={handleDismiss} className="text-sm">
                     Dismiss

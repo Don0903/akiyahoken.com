@@ -8,11 +8,11 @@ export default function HeroSection() {
       <div className="max-w-4xl mx-auto text-center">
         <AvatarFlipper />
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          I'm <span className="text-primary">Akiya</span>
+          I&apos;m <span className="text-primary">Akiya</span>
         </h1>
         <JobTitleSlider />
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-8">
-          Welcome to my portfolio! I'm a UX/UI developer with a background in Machine Learning, Cognitive science, and Human-Computer Interaction - with a passion for creating beautiful, functional, and user-centered digital experiences.
+          Welcome to my portfolio! I&apos;m a UX/UI developer with a background in Machine Learning, Cognitive science, and Human-Computer Interaction - with a passion for creating beautiful, functional, and user-centered digital experiences.
         </p>
       </div>
     </AnimatedSection>

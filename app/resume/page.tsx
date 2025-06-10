@@ -158,7 +158,7 @@ export default function CVPage() {
                               <li>
                                 <span className="font-medium">AI engineering</span> - Researched and created an AI
                                 model, that predicts the anthropocentric and bio markers that influences the most in
-                                increasing body fat percentage - based on individuals diet (language used: R).
+                                increasing body fat percentage - based on individuals&apos; diet (language used: R).
                               </li>
                             </ul>
                           </div>

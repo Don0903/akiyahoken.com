@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const avatarImages = [
   "/profile1.jpeg?height=400&width=400&text=Photo+1",
@@ -33,12 +34,14 @@ export default function AvatarFlipper() {
         <motion.div
           animate={{ rotateY: isFlipping ? 90 : 0 }}
           transition={{ duration: 0.3 }}
-          className="w-full h-full"
+          className="w-full h-full relative"
         >
-          <img
+          <Image
             src={avatarImages[currentImage] || "/placeholder.svg"}
             alt="Profile"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
         </motion.div>
 
