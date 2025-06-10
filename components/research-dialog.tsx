@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 
 import {
   AlertDialog,
@@ -47,8 +48,13 @@ export default function ResearchDialog({ trigger, title, image, content, technol
 
         <div className="space-y-6">
           {/* Hero Image */}
-          <div className="w-full h-64 rounded-lg overflow-hidden">
-            <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+          <div className="relative w-full h-64 rounded-lg overflow-hidden">
+            <Image
+              src={image || "/placeholder.svg"}
+              alt={title}
+              fill
+              className="object-cover"
+            />
           </div>
 
           {/* Technologies */}

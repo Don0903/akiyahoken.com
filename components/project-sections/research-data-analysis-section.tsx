@@ -5,6 +5,7 @@ import { Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import AnimatedSection from "@/components/animated-section"
 import ResearchDialog from "@/components/research-dialog"
+import Image from "next/image"
 
 const researchProjects = [
   {
@@ -95,11 +96,14 @@ export default function ResearchDataAnalysisSection() {
                 technologies={project.technologies}
                 trigger={
                   <div className="cursor-pointer">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full h-48 object-cover"
-                    />
+                    <div className="relative w-full h-48">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                       <p className="text-muted-foreground mb-4">{project.description}</p>

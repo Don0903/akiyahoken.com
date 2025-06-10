@@ -139,7 +139,7 @@ export default function CVPage() {
                                 converts any neural data from one data format (XDF) into another (NWB).
                               </li>
                               <li>
-                                <span className="font-medium">Frontend dev</span> - Worked on the Research-group's
+                                <span className="font-medium">Frontend dev</span> - Worked on the Research-group&apos;s
                                 website, to streamline the structure so that editing, and adding new publications is
                                 easier. Also included animations and transitions to modernise their website, to improve
                                 UI and UX.
