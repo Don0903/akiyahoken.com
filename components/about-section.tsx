@@ -42,16 +42,15 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <p className="text-lg text-muted-foreground mb-6">
-              I&apos;m a passionate developer with over 5 years of experience creating digital solutions that make a
-              difference. I specialize in modern web technologies and love turning complex problems into simple,
+              I&apos;m a passionate developer with over 2 years of experience creating digital solutions that make a
+              difference. I specialise in modern web technologies and love turning complex problems into simple,
               beautiful designs.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              When I&apos;m not coding, you can find me exploring new technologies, contributing to open source projects, or
-              sharing knowledge with the developer community.
+              When I&apos;m not coding, you can find me exploring new technologies, staying active, or going out with friends.
             </p>
             <div className="flex flex-wrap gap-4">
-              {["5+ Years Experience", "50+ Projects", "Remote Friendly"].map((item, index) => (
+              {["2+ Years Experience", "5+ Projects", "Remote Friendly"].map((item, index) => (
                 <motion.div
                   key={item}
                   initial={{ opacity: 0, scale: 0.8 }}
