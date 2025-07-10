@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Master's student with hands-on experience in AI/ML prototyping and Python development. Proven ability in
+                Master&apos;s student with hands-on experience in AI/ML prototyping and Python development. Proven ability in
                 creating models and coding data conversion tools.
               </p>
             </div>
@@ -76,8 +76,6 @@ export default function AboutPage() {
                     <div className="text-center space-y-4">
                       <h2 className="text-2xl md:text-3xl font-bold">AKIYA HOKEN</h2>
                       <div className="space-y-2 text-muted-foreground">
-                        <p>Shaftesbury Court, Shaftesbury Street, Flat 19</p>
-                        <p>N1 7HL, London, United Kingdom</p>
                         <div className="flex flex-wrap justify-center gap-4 mt-4">
                           <a
                             href="tel:+447448576931"
@@ -95,21 +93,15 @@ export default function AboutPage() {
                         </div>
                         <div className="flex justify-center gap-4 mt-4">
                           <Button size="sm" variant="outline" asChild>
-                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/akiya-hoken-061083260/" target="_blank" rel="noopener noreferrer">
                               <Linkedin className="h-4 w-4 mr-2" />
                               LinkedIn
                             </a>
                           </Button>
                           <Button size="sm" variant="outline" asChild>
-                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/Don0903" target="_blank" rel="noopener noreferrer">
                               <Github className="h-4 w-4 mr-2" />
                               GitHub
-                            </a>
-                          </Button>
-                          <Button size="sm" variant="outline" asChild>
-                            <a href="/" target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="h-4 w-4 mr-2" />
-                              Portfolio
                             </a>
                           </Button>
                         </div>
@@ -289,7 +281,7 @@ export default function AboutPage() {
                               programming and rapid prototyping skills
                             </li>
                             <li>
-                              Enhanced the research group's website by streamlining the structure and integrating modern
+                              Enhanced the research group&apos;s website by streamlining the structure and integrating modern
                               UI/UX animations and transitions
                             </li>
                           </ul>
