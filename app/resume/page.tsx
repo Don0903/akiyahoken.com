@@ -3,7 +3,7 @@
 import TopNav from "@/components/top-nav"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Download, ExternalLink, Github, Linkedin } from "lucide-react"
+import { Download, Github, Linkedin } from "lucide-react"
 import { motion } from "framer-motion"
 import { GlowingEffect } from "@/components/ui/glowing-effect"
 
