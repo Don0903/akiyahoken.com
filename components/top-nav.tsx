@@ -8,7 +8,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Resume", href: "/resume" },
   { name: "Work", href: "/work" },
-  { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "/https://substack.com/@akiyahoken" },
 ]
 
 export default function TopNav() {
